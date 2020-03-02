@@ -1,9 +1,12 @@
 const express = require("express")
 const server = express()
+const cors = require('cors')
 
 server.use(express.static('public'))
 
 server.use(express.urlencoded({extended: true}))
+
+server.use(cors())
 
 // Configuração com o banco.
 const {Pool,client} = require('pg')
