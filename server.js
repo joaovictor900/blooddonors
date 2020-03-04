@@ -8,6 +8,7 @@ server.use(express.urlencoded({extended: true}))
 
 server.use(cors())
 
+const port = process.env.PORT || 3000
 // Configuração com o banco.
 const {Pool,client} = require('pg')
 const pool = new Pool({
