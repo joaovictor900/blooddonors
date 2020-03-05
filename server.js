@@ -12,10 +12,10 @@ const port = process.env.PORT || 3000
 // Configuração com o banco.
 const {Pool,client} = require('pg')
 const pool = new Pool({
-    user: 'postgres',
-    host:'localhost',
-    database: 'doe',
-    password: '123456',
+    user: 'mooowlsksbrweu',
+    host:'ec2-23-22-156-110.compute-1.amazonaws.com',
+    database: 'd3ircpr14pj1th',
+    password: '2238860cc37f1ed18109dd6b65332cc9d87d5b85ded56eca932d6d734617a88d',
     port: 5432
 })
  
