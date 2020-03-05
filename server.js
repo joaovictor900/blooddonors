@@ -8,7 +8,6 @@ server.use(express.urlencoded({extended: true}))
 
 server.use(cors())
 
-const port = process.env.PORT || 3000
 // Configuração com o banco.
 const {Pool,client} = require('pg')
 const pool = new Pool({
@@ -31,7 +30,7 @@ nunjucks.configure("./", {
     noCache:true
 })
 
-/*//configurar a apresentação da página
+//configurar a apresentação da página
 server.get("/", function(req, res){
     pool.query("SELECT * FROM donors", function(err, result){
         if (err) return res.send("Erro de banco de dados.")
@@ -51,7 +50,7 @@ server.post("/", function(req, res){
     }
     
     const query = `INSERT INTO donors
-        ("name", "email", "blood")values($1, $2, $3)`
+        ("name", "email", "blood"alues($1, $2, $3)`
 
     const values =  [name, email, blood]
     pool.query(query, values, function(err){
@@ -60,7 +59,7 @@ server.post("/", function(req, res){
         return res.redirect("/")
     })  
 })
-
+const  port = process.env.PORT || 3000
 server.listen(port, function(){
     console.log("Iniciei o servidor!")
 })
