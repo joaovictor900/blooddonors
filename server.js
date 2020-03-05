@@ -31,7 +31,7 @@ nunjucks.configure("./", {
     noCache:true
 })
 
-/*//configurar a apresentação da página
+//configurar a apresentação da página
 server.get("/", function(req, res){
     pool.query("SELECT * FROM donors", function(err, result){
         if (err) return res.send("Erro de banco de dados.")
@@ -39,7 +39,7 @@ server.get("/", function(req, res){
 
         return res.render("index.html", {donors})
     })   
-})*/
+})
 
 server.post("/", function(req, res){
     const name = req.body.name
