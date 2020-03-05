@@ -36,10 +36,9 @@ server.get("/", function(req, res){
         if (err) return res.send("Erro de banco de dados.")
         const donors = result.rows
 
+        return res.render("index.html", {donors})
         
-    }) 
-    
-    return res.render("index.html", {donors})
+    })
 })
 
 server.post("/", function(req, res){
