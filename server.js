@@ -33,7 +33,7 @@ nunjucks.configure("./", {
 //configurar a apresentação da página
 server.get("/", function(req, res){
     pool.query("SELECT * FROM donors", function(err, result){
-        if (err) return res.send("Erro de banco de dados.")
+        //if (err) return res.send("Erro de banco de dados.")
         const donors = result.rows
 
         return res.render("index.html", {donors})
